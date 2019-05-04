@@ -1,8 +1,18 @@
 from linked import LinkedList
 from itertools import tee
 
+# Install forwardable from PyPI:
+#
+#       pip install forwardable
+#
+from forwardable import forwardable, def_delegators
 
+
+@forwardable()
 class InsertCounter:
+
+    def_delegators('linked_list',
+                   'remove,clear,__iter__,__str__,__len__')
 
     def __init__(self, linked_list):
         self.linked_list = linked_list
@@ -20,21 +30,6 @@ class InsertCounter:
     @property
     def counter(self):
         return self._counter
-
-    def remove(self):
-        return self.linked_list.remove()
-
-    def clear(self):
-        self.linked_list.clear()
-
-    def __iter__(self):
-        return self.linked_list.__iter__()
-
-    def __str__(self):
-        return self.linked_list.__repr__()
-
-    def __len__(self):
-        return self.linked_list.__len__()
 
 
 lst = InsertCounter(LinkedList())
