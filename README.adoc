@@ -1,0 +1,7 @@
+= The Perils of Inheritance: Why We Should Prefer Composition
+
+This is the source code used during my https://us.pycon.org/2019/[PyCon 2019] talk. The presentation https://docs.google.com/presentation/d/e/2PACX-1vRNv4rLHUdM03wPOfe8GuqZQWjrVKfaDtULV2K_qVa4oHkR4WPfjsYaQy22sCuZcoAO26WToGcI7HME/pub?start=false&loop=false&delayms=3000[slides] are also available.
+
+Inheritance is among the first concepts we learn when studying object-oriented programming. But inheritance comes with some unhappy strings attached. Inheritance, by its very nature, tends to bind a subclass to its superclass. This means that modifying the behavior of a superclass might alter the behavior of all its subclasses, sometimes in unanticipated ways. Furthermore, it’s commonly accepted that inheritance actually breaks encapsulation. So, if inheritance has these issues, what alternative do we have? More than two decades ago, The Gang of Four (Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides) suggested in their famous Design Patterns book that we should favor object composition over class inheritance.
+
+In this talk I will show some code examples in Python where inheritance goes astray and demonstrate how to correct them by using composition. My intention is not to demonize inheritance, but instead present how to use it wisely in order to improve the design of our object-oriented software so that it’s more flexible and easier to maintain.
