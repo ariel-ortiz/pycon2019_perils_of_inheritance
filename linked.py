@@ -18,10 +18,7 @@ class LinkedList:
 
     def insert_all(self, iterable):
         for value in iterable:
-            new_node = LinkedList.Node(value)
-            new_node.next = self.header.next
-            self.header.next = new_node
-            self.length += 1
+            self.insert(value)
 
     def remove(self):
         if self.header.next is None:
