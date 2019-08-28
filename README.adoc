@@ -1,7 +1,15 @@
 = The Perils of Inheritance: Why We Should Prefer Composition
 
-This is the source code used during my https://us.pycon.org/2019/[PyCon 2019] talk. The presentation https://docs.google.com/presentation/d/e/2PACX-1vRNv4rLHUdM03wPOfe8GuqZQWjrVKfaDtULV2K_qVa4oHkR4WPfjsYaQy22sCuZcoAO26WToGcI7HME/pub?start=false&loop=false&delayms=3000[slides] are also available.
+This is the source code used during my https://us.pycon.org/[PyCon USA 2019] and https://www.pylatam.org/[PyCon Latam 2019] talks. The presentation slides in https://bit.ly/2LpxtF1[English] and https://bit.ly/32euMtF[Spanish] are also available.
 
 Inheritance is among the first concepts we learn when studying object-oriented programming. But inheritance comes with some unhappy strings attached. Inheritance, by its very nature, tends to bind a subclass to its superclass. This means that modifying the behavior of a superclass might alter the behavior of all its subclasses, sometimes in unanticipated ways. Furthermore, it’s commonly accepted that inheritance actually breaks encapsulation. So, if inheritance has these issues, what alternative do we have? More than two decades ago, The Gang of Four (Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides) suggested in their famous Design Patterns book that we should favor object composition over class inheritance.
 
 In this talk I will show some code examples in Python where inheritance goes astray and demonstrate how to correct them by using composition. My intention is not to demonize inheritance, but instead present how to use it wisely in order to improve the design of our object-oriented software so that it’s more flexible and easier to maintain.
+
+= Los riesgos de la herencia: por qué es preferible usar composición
+
+Este es el código fuente utilizado para mis presentaciones de https://us.pycon.org/[PyCon USA 2019] y https://www.pylatam.org/[PyCon Latam 2019]. También están disponibles las diapositivas en https://bit.ly/2LpxtF1[inglés] y https://bit.ly/32euMtF[español].
+
+La herencia es uno de los primeros conceptos que aprendemos cuando estudiamos programación orientada a objetos. Pero la herencia trae consigo algunas desventajas y limitaciones que solemos ignorar. La herencia, por su propia naturaleza, tiende a vincular fuertemente una subclase con su superclase. Esto significa que la modificación del comportamiento de una superclase puede alterar el comportamiento de todas sus subclases, a veces en maneras que no anticipamos. Además, es bien sabido que la herencia rompe la encapsulación. Entonces, si la herencia tiene estos problemas, ¿qué alternativa tenemos? Hace más de dos décadas, la pandilla de los cuatro (Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides) sugirieron en su famoso libro de Patrones de diseño que es preferible favorecer la composición de objetos sobre la herencia de clases.
+
+En esta plática veremos ejemplos de código en Python donde la herencia se descarrila y mostraré cómo corregir esta situación usando composición. Mi intención no es satanizar a la herencia, sino mostrar cómo usarla sabiamente para mejorar el diseño de nuestro software orientado a objetos con el fin de que sea más flexible y fácil de mantener.
